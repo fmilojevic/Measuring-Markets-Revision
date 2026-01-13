@@ -1,0 +1,756 @@
+%\part{title}%2multibyte Version: 5.50.0.2960 CodePage: 65001
+% Page Format %
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.0}
+%\usepackage{setspace}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amssymb, pdfpages}
+\usepackage{color}
+\usepackage{array}
+\usepackage{gastex}
+\usepackage{titlesec} 
+\usepackage{epigraph} 
+\usepackage{multirow}
+\usepackage{bbm}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor,psfrag}
+\usepackage{natbib}
+\usepackage{pdflscape}
+\usepackage[multiple]{footmisc}
+\usepackage{enumerate}
+\usepackage{appendix}
+\usepackage[citecolor= black,
+			colorlinks=true,
+		    linkcolor = black,
+            urlcolor  = black]{hyperref}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{threeparttablex}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{makecell}
+\usepackage{clipboard}
+
+% Tables
+\usepackage{tabularray}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{codehigh}
+\usepackage[normalem]{ulem}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{siunitx}
+\newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}}
+\newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}}
+\NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}}
+\usepackage{subcaption} % modern subfigures
+\usepackage{needspace}  % to keep blocks together
+\usepackage{caption}    % tweak caption spacing
+
+
+\newclipboard{output-myclipboard}
+
+\makeatletter
+\let\TPT@hookin\@gobble
+\let\TPT@hookarg\@gobble
+\makeatother
+
+\usepackage{tablefootnote}
+
+%\usepackage[a4paper, total={7in, 9.5in}]{geometry}
+
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{dsfont}
+
+% comment out for Ecma
+\usepackage{geometry}
+% comment in for Ecma
+%\usepackage[margin=1.5in]{geometry}
+
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup[table]{labelfont={bf}}
+\captionsetup[figure]{labelfont={bf}}
+\captionsetup{justification=centering}
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=65001}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Monday, May 29, 2017 08:21:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+ %%% comment out for Ecma:
+%\setlength{\evensidemargin}{0.0in}
+%\setlength{\oddsidemargin}{0.0in}
+%\setlength{\textwidth}{6.5in}
+%\topmargin -0.25in
+%\textheight 8.5in
+
+ \hfuzz=50pt
+ \pagestyle{plain}
+ 
+\newcommand{\eqthreshn}{{t^*_N}}
+\newcommand{\pnd}{1-p+pF(\eqthreshn)}
+\newcommand{\ppnd}{\big(1-p+pF(\eqthreshn)\big)}
+\newcommand{\eqmfreq}{{\omega^*}}
+\newcommand{\eqmfreqn}{{\omega^*_N}}
+\newcommand{\eqmfreqnp}{{\omega^*_{N+1}}}
+\newcommand{\eqthresh}{{t^*}}
+\newcommand{\eqthreshX}{{t^{**}}}
+\newcommand{\nbar}{{\overline{N}}}
+\newcommand{\wlim}{\omega_\infty}
+\newcommand{\wdye}{\hat{\omega}}
+\newcommand{\tdye}{\hat{t}}
+\newcommand{\limn}{\lim_{N\to\infty}}
+\newcommand{\fsn}{\omega_N^*}
+\newcommand{\eqprize}{\phi^*}
+\newcommand{\moprize}{\phi^M}
+\newcommand{\dif}{\;\mathrm{d}}
+\newcommand{\diffp}[2]{\frac{\partial #1}{\partial #2}}
+
+\newcommand{\noamph}{\emph}
+
+\newcommand{\newsection}[1]{\clearpage \setcounter{table}{0} \setcounter{figure}{0} \renewcommand{\thetable}{#1\arabic{table}} \renewcommand{\thefigure}{#1\arabic{figure}} }
+
+\newcommand{\diff}[2]{\frac{\dif #1}{\dif #2}}
+\renewcommand{\Re}{\mathbb{R}}                             
+\def\endproof{{\quad}$\blacksquare$}
+\newcommand{\indicator}[1]{\mathbbm{1}_{\left[ {#1} \right]}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{prop}{Proposition}
+\newtheorem{example}{Example}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{condition}[theorem]{Condition}
+
+\newcommand{\Change}[1]{{\color{red}#1}}
+\renewcommand{\theenumi}{\roman{enumi}}            
+\renewcommand{\labelenumi}{(\theenumi)}
+
+\usepackage{titling} % to move the title upwards
+\setlength{\droptitle}{-6.5em} 
+
+\setcounter{table}{0} 
+\setcounter{figure}{0}
+
+%\input{tcilatex}
+
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+	%\onehalfspacing
+
+% Import scalar statistics
+\input{output_tiktok/statistics/scalar_statistics}
+\input{output_nomo/nomo_scalars}
+
+\begin{document}
+%	\setstretch{1.25}
+
+
+
+\author{\textbf{Leonardo Bursztyn\thanks{University of Chicago and NBER, \texttt{bursztyn@uchicago.edu}}}
+\and \textbf{Matthew Gentzkow\thanks{Stanford University and NBER, \texttt{gentzkow@stanford.edu}}}
+\and \textbf{Rafael Jim\'{e}nez-Dur\'{a}n\thanks{Bocconi University, IGIER, CESifo, and Chicago Booth Stigler Center, \texttt{rafael.jimenez@unibocconi.it}}}
+\and \textbf{Aaron Leonard\thanks{University of Chicago, \texttt{aaronleonard@uchicago.edu}}}
+\and \textbf{Filip Milojević\thanks{University of Chicago, \texttt{milojevic@uchicago.edu}}}
+\and \textbf{Christopher Roth\thanks{University of Cologne, NHH Norwegian School of Economics, Max Planck Institute for Research on Collective Goods, CESifo, and CEPR, \texttt{roth@wiso.uni-koeln.de}}}}
+
+% alternative title: Collective Substitution
+% alternative title: Measuring Collective Substitution
+
+\title{\textbf{Measuring Markets for Network Goods}\thanks{
+\footnotesize{We are grateful to Guy Aridor and Julian Wright for useful comments. Utkarsh Dandanayak, Ari Jacob, Max M\"{u}ller, Arthur Welch, and especially Luca Moreno-Louzada provided excellent research assistance. The research described in this article was approved by the University of Chicago Social and Behavioral Sciences Institutional Review Board. We acknowledge NOMO Technologies, Inc. for sharing data used in this study. Roth acknowledges funding from the  Deutsche  Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy EXC 2126/1-390838866. This work was partially supported by the RCN through its CoE Scheme, FAIR project No 262675. Disclosures: Leonardo Bursztyn is the founder and CEO of NOMO and holds equity. Matthew Gentzkow is a scientific advisor for NOMO and holds equity.}}}
+\date{\today}
+
+ 
+
+\maketitle
+
+
+\thispagestyle {empty}\bigskip \vspace{-0.4in}
+
+\begin{center}
+\textbf{Abstract}
+\end{center}
+
+ 
+
+\begin{spacing}{1}
+\noindent Market definition is challenging in settings with network effects, where substitution patterns depend on changes in network size. We study these effects in the context of social media. We conduct an incentivized experiment comparing substitution in response to a proposed U.S. TikTok ban, in which all users simultaneously leave the app, with substitution when only a single user deactivates. Consistent with a simple network model, we find substantially higher valuations of alternative social apps under a collective TikTok ban than under an individual TikTok deactivation. We then show that a collective time limit challenge, where peers jointly reduce TikTok or Instagram use, leads to more time spent on alternative social apps than has been observed in prior individual deactivation experiments. Together, our results suggest that individual-level substitution estimates can be an unreliable guide to market definition for network goods. 
+
+
+\end{spacing}
+
+
+
+\bigskip
+
+\noindent \textbf{Keywords:} Market Definition, Network Goods, Coordination, Substitution, Social Media.\\\vspace{-0.1cm}
+
+\noindent \textbf{JEL Classification:} D85, L00, L40
+
+\bigskip \bigskip \bigskip \newpage
+
+\pagebreak
+
+
+\setcounter{page}{1}
+\begin{spacing}{1.2}
+
+
+\section{Introduction}\label{sec:introduction}
+%Social Apps in the intro 
+Market definition is central to antitrust analysis, guiding assessments of market power, competition, and consumer harm. Consider the recent U.S. antitrust case against Meta, which hinges critically on defining the ``relevant market'' in which Meta's platforms compete. The Federal Trade Commission (FTC) argues that the market only comprises ``personal social networking services,'' focusing on platforms like Facebook and Instagram that connect users with friends and family, while excluding other entertainment-based social apps such as YouTube and TikTok. Meta counters that the market should be broader, including all platforms competing for user attention and advertising revenue.\footnote{See \cite{FTC2021}. For popular press coverage, see ``Meta faces April trial in FTC case seeking to unwind Instagram merger'' \citep{Reuters2024}.}
+
+A first step in market definition assessments is determining which products are substitutes.  Empirical estimates of substitution patterns often capture how the unavailability of a given product affects consumer demand for alternative products---for example, through deactivation studies in the case of digital products \citep{allcott2020welfare,aridormeasuring2025}. Such evidence primarily relies on individual-level interventions, which evaluate changes in demand while holding others' consumption fixed. Yet, in real-world markets, network effects---which arise when demand depends on network size or others' consumption---can play an important role in determining the equilibrium level of demand for alternative products. Obtaining credible estimates that account for network effects is challenging: experiments typically hold network size constant, and natural experiments that provide the necessary variation in network size are uncommon and lack individual-level counterfactuals.
+
+In this paper, we introduce new evidence on the gap between substitution patterns that account for network effects and those that do not. We first show, using a simple conceptual framework, that cross-price derivatives estimated while holding network size fixed generally fail to reflect the substitution that would result from market-wide price changes---potentially even resulting in a different sign. Such estimates reflect the direct effect of a change in a product's price on another product's demand, but ignore that the resulting changes in the network sizes will trigger feedback effects on demand that amplify or dampen the initial cross-price response. Therefore, collective interventions, which evaluate the responses of multiple consumers simultaneously, may provide a more accurate picture of market-level substitution patterns in such settings.
+
+
+
+To study how network effects influence substitution patterns, we conduct a pre-registered online experiment with \NumRespondents\space active U.S. TikTok users aged between 18 and 27. Participants are recruited from Prolific, a widely used online survey provider. Our experimental design leverages a moment of increased policy uncertainty surrounding a potential U.S. ban of TikTok---one of the most widely used social media platforms at the time, with over 170 million U.S. users.\footnote{On TikTok, network effects could arise through content generation: as more users join and engage with the platform, the volume and diversity of user-generated videos increases, which enhances the experience for others. Network effects could also arise through content sharing between individuals: users might enjoy a video more when they can discuss it with a larger fraction of their friends. \cite{bursztyn2023product} provide evidence of network effects on TikTok between college students.} After several months during which a nationwide ban on TikTok seemed increasingly likely, the U.S. government implemented the ban on January 19, 2025, prompting a temporary shutdown of the platform.\footnote{Anticipating the nationwide ban, TikTok voluntarily suspended its U.S. services on January 18, resulting in a roughly 14‑hour shutdown. On January 20, President Donald Trump reversed the ban by issuing an executive order postponing enforcement for 75 days to allow for negotiations over the app's ownership and to address national security concerns \citep{AP2025}.} The uncertainty in the period leading up to the ban allows us to credibly elicit individuals' willingness to accept (WTA) to deactivate various platforms under different potential TikTok ban scenarios. These scenarios isolate the role of network effects and provide insights into the substitution patterns between TikTok and other platforms. 
+
+In particular, we examine respondents’ incentivized valuations of other social apps using a simple Becker-DeGroot-Marschak (BDM) mechanism \citep{becker1964measuring}. We focus on three other  social apps: YouTube, Instagram, and Snapchat, which are also popular among young adults \citep{pew2024socialmedia}. Like TikTok, Instagram and YouTube center on algorithmically curated, short-form, visually engaging public content aimed at broad audiences. Snapchat's primary focus is on ephemeral messaging and personal interactions rather than public content sharing and consumption. We randomly assign each participant one of these three other social apps, which we refer to as their \textit{focal app}.
+
+Respondents complete three scenarios for their focal app. In the \textit{no TikTok ban} scenario, participants are asked how much compensation they would require to individually deactivate their focal app for four weeks if the TikTok ban does not take place. We then elicit respondents’ required compensation to deactivate their focal app under two additional, randomly ordered, scenarios: 1) the \textit{TikTok ban} scenario, in which the nationwide TikTok ban is implemented, and 2) the \textit{individual TikTok deactivation} scenario, in which the ban does not happen but the respondent is required to individually deactivate TikTok in exchange for monetary compensation.\footnote{Respondents estimated a \EstTiktokBanLikelihood\space likelihood that the TikTok ban would take effect on January 19, 2025, underscoring that they perceived this scenario as quite likely at the time of our experiment. Reassuringly, this number is close to the \PolymarketTiktokBanLikelihood\space average perceived likelihood observed on Polymarket, an online betting platform, reflecting the general market sentiment at the time of our experiment.}
+ 
+We begin by comparing participant valuations across the \textit{individual TikTok deactivation} and the \textit{no TikTok ban} scenarios, holding network size constant.\footnote{We focus on within-subject comparisons, as these increase statistical precision and offer more interpretable insights than absolute valuations, which may lack coherence \citep{ariely2003coherent}.} For Instagram,  \InstagramIndGtNoBanRate\space of participants value the platform more under an individual TikTok deactivation compared to the no ban scenario. Conversely,  \InstagramIndLtNoBanRate\space of participants assign a higher valuation to Instagram when TikTok remains available relative to when it is individually deactivated. Thus, a substantial positive \emph{net fraction} (\NFInstagramIndNoban\ percentage points) of participants value Instagram more under the \textit{individual TikTok deactivation} scenario compared to the \textit{no TikTok ban} scenario. YouTube exhibits similar valuation patterns, with a net fraction of \NFYouTubeIndNoban\ percentage points. In contrast, Snapchat's net fraction is negative and near zero, suggesting that when the network size remains fixed, a similar fraction of our participants consider Snapchat to be a complement to TikTok as those who consider it a substitute.\footnote{While our net fraction measure does not directly correspond to substitution in a traditional Hicksian sense, under quasilinear utility, it represents a discrete-choice analogue of money-metric substitutability as described in \cite{samuelson1974complementarity}. It effectively captures the share of users who view each platform as a money-metric substitute rather than complement when TikTok is removed from the choice set. As we show in Section  \ref{sec:dr}, our main implications remain unchanged when, instead of net fractions, we consider a parameter more directly related to diversion ratios: second-choice Wald estimates \citep{conlon2021empirical}, given by the gain in users of a focal app divided by the number of lost TikTok users in response to a TikTok deactivation or ban.}
+
+Next, we compare valuations between the\textit{ TikTok ban} and the \textit{no TikTok ban} scenarios. The net fractions of participants with a higher valuation under a collective ban compared to no ban are \NFInstagramBanNoban, \NFYouTubeBanNoban, and \NFSnapchatBanNoban\ percentage points for Instagram, YouTube, and Snapchat, respectively ($p<0.01$ for all). These results imply that the fraction of people who view these three platforms as substitutes for TikTok is larger than the fraction who view them as complements in a collective deactivation scenario. 
+
+Lastly, we turn to the role of network effects by comparing valuations between the collective \textit{TikTok ban} and \textit{individual TikTok deactivation} scenarios. For Instagram, \InstagramBanGtIndRate\space of participants report a higher valuation under the collective TikTok ban than under the individual TikTok deactivation, while \InstagramBanLtIndRate\space indicate the reverse. Instagram thus exhibits a positive net fraction (\NFInstagramBanInd\ percentage points) of participants who value it more under the collective compared to the individual TikTok deactivation. Similar results emerge for YouTube and Snapchat, with net fractions of \NFYouTubeBanInd\ and \NFSnapchatBanInd\ percentage points, respectively ($p<0.01$ in all cases). Our findings on Snapchat are particularly noteworthy, revealing qualitative differences in substitution patterns due to network effects. On average, this platform does not appear to be a  substitute for TikTok when TikTok is individually deactivated (network size constant), but it emerges as one under collective TikTok deactivation for a substantial share of users, albeit less strongly than Instagram or YouTube. Given that Snapchat is a messaging-oriented app, this difference highlights the critical role coordination plays in shaping perceptions of platform substitutability, and how the choice between individual-level versus collective interventions matters for the measurement of substitution patterns in the presence of network effects. 
+
+
+We also ask participants directly how they expected their own and others' time use to change in response to the possible scenarios. These results are consistent with the findings above. First, respondents' expectations about changes in others' time use on Instagram, YouTube, and Snapchat align with their substitution patterns. In particular, individuals who expect an above-median increase in the time their friends will spend on their focal app exhibit a significantly larger gap in valuation between the \textit{TikTok ban} and \textit{individual TikTok deactivation scenarios}. This finding further provides evidence that network effects are important determinants of substitution patterns. Second, individuals' own expected time changes are consistent with the patterns observed in the elicitation exercise. We find that a net positive fraction of respondents expect to spend more time on other social apps---namely, Instagram, YouTube, and Snapchat---under the \textit{TikTok ban }compared to the \textit{individual TikTok deactivation}. Conversely, intended substitution toward non-social activities, such as playing phone games or meditating, is weaker under the\textit{ TikTok ban} than under the \textit{individual TikTok deactivation. }
+
+
+One limitation of our evidence is that it is unclear how changes in valuations, which capture substitution patterns at the extensive margin (usage vs. no usage), map to changes in  substitution patterns that include intensive-margin responses (changes in time spent). Another limitation is that our elicitation requires respondents to accurately predict the general equilibrium effects of collective interventions. 
+
+To address these limitations, we provide supplemental evidence from a collective, incentivized time limit challenge launched by the social coordination app NOMO (No Missing Out). The collective challenge limited the use of Instagram and TikTok during two weeks at the University of Chicago. Participants were asked to adhere to a one-hour daily time limit between October 20th and November 3rd, 2024, and to verify compliance by uploading screenshots documenting their app usage. More than 800 undergraduate students, almost 11\% of the undergraduate student population, participated. 
+
+Our estimates from this collective challenge reveal substantial substitution to other social apps: A 10-minute reduction of TikTok and Instagram is associated with an increase in the consumption of other social apps by \TrtFDSubSocialPerTenMins\space minutes ($p<0.05$), implying a rate of substitution of \TrtFDSubPercentSocial. Consistent with the idea that coordination on a new outside option takes time to materialize, we document larger substitution toward other social apps over time: while the rate of substitution in week one of the challenge is \TrtFDSubPercentSocialWeekOne\space of the reduction in TikTok and Instagram, it is \TrtFDSubPercentSocialWeekTwo\space in week two. The extent of time substitution we observe is larger than what is reported in some prior individual-level deactivation estimates in the literature, which range between 9\% and 41\% \citep{aridormeasuring2025,allcott2025effect}. 
+However, we emphasize that this evidence should be interpreted with caution given the lack of a randomized control group. 
+
+
+Another key limitation of our findings stems from the self-selected nature of our samples both in the experiment and in the field study. In our experiment, around \DeactivationAgreeRate\space of respondents who initially started our survey chose to participate in the deactivation study.\footnote{This fraction is relatively high compared to other deactivation studies \citep{allcott2024effects}.} Finally, our estimates ignore other equilibrium responses besides direct network effects, such as changes in advertising prices \citep{donati2025cost}.  
+
+
+
+Notwithstanding these limitations, both our experimental estimates and descriptive field evidence highlight the importance of accounting for changes in network size through collective interventions when defining the relevant market for social media platforms. Our results showcase that fixed-network interventions can underestimate the degree of substitutability between social products and overestimate the substitutability between social and non-social products. This effect could also spill over to other non-digital social activities, such as eating out with friends, where collective treatments may facilitate coordination among individuals. Beyond social media, these findings have broader implications for competition policy in markets with network effects.
+
+
+
+
+
+
+Our paper speaks to a growing literature on the economics of social media \citep{aridor2024economics}. Our study builds on previous research examining the effects of individual-level social media deactivation, with a particular focus on substitution patterns \citep{mosquera2020economic,brynjolfsson2023digital,brynjolfsson2023attention,allcott2020welfare,allcott2022digital,allcott2024effects,collis2022effects,katz2025digital, aridormeasuring2025}. 
+The most closely related study is \cite{aridormeasuring2025}, who estimates substitution patterns for YouTube and Instagram based on an individual-level deactivation study and finds cross-category substitution to other social apps but also substantial substitution rates to non-digital activities.  \cite{rehse2025competition} find quantitatively similar substitution patterns to \cite{aridormeasuring2025}  among US users in response to a 6-hour Meta platform outage.\footnote{\label{foo:outage}\cite{rehse2025competition} find that a 100\% reduction in Meta's services leads to an 18.4\% increase in non-Meta social media usage, while \cite{aridor2022drivers} finds that a 100\% restriction of Instagram usage leads to a 22.7\% increase in the time spent on non-Instagram social applications. A limited network response could explain this similarity. While platform outages can, in principle, capture network effects and the coordination of users on different platforms, the short-lived duration of the 2021 Meta outages (6 hours) studied by \cite{rehse2025competition} restricts this possibility.} We differ from this literature in our focus on explicitly accounting for network effects in this market. Further, in comparison to existing estimates from individual-level interventions, our data from a two-week collective social media time limit yields a larger magnitude of substitution to other social apps. 
+
+We also contribute to a longstanding literature in industrial organization that examines consumer choice in the presence of network effects \citep{rohlfs1974theory,katz1985network,farrell1985standardization,rochet2003platform,rysman2004competition}. More recently, the literature has theoretically and empirically studied product market traps---situations where a large fraction of active users derive negative welfare from the product---in settings with network effects \citep{bursztyn2023product,hagiu2025platform}. Despite their importance, network effects have proven challenging to account for. Related to the literature on contingent valuation \citep{landry2007using}, we provide an empirical methodology to credibly measure valuations of social media apps for the scenario of a collective deactivation. Building on \cite{bursztyn2023product}, who demonstrate that considering the collective nature of the outside option is crucial for accurate welfare measurement, we show that accounting for the collective nature is also essential for correctly identifying the direction and magnitude of substitution patterns.
+
+
+ 
+
+Finally, we contribute to a literature examining market power and market definition, particularly in the context of digital platforms \citep{franck2019market,CalvanoPolo2020,scott2019committee,allcott2025sources}, and a literature studying competition in media markets \citep{anderson2005market,bergemann2011targeting,anderson2012market,athey2018impact,prat2022attention,anderson2023ad}.\footnote{Recent work also studies how social forces affect market power \citep{bursztyn2024nonuser}.} This literature recognizes that direct and indirect network effects \citep{filistrucchi2014market} affect market definitions; we contribute by providing both experimental and descriptive empirical evidence on substitution patterns after accounting for direct network effects. 
+
+
+\section{Conceptual Framework}\label{sec:conceptual}
+ 
+Suppose there are $J$ products. The aggregate demand for product $j$ in a model with network effects is given by $Q_j(p,q)$, where $p=(p_1,p_2,\dots,p_J)$ is the vector of prices and $q=(q_1,q_2,\dots,q_J)$ is the vector of  quantities. Prices could take the form of monetary prices or advertising loads \citep{anderson2005market}. Quantities can represent different units of demand---such as the number of consumers, total time spent, or total amount consumed---depending on the application. Demands are allowed to exhibit not just own network effects (to depend on $q_j$) but also cross-product network effects (to depend on $q_k$ for $k\neq j$).\footnote{Cross-product network effects can arise even when the utility from each product depends only on its own user base. For example, with positive own-network effects, an increase in the size of product $k$ raises the utility of choosing that product, which in turn reduces the equilibrium share of users selecting a competing product $j$.} We assume that demands are smooth, non-negative, and bounded.
+
+Let $q_j(p)$ denote the equilibrium quantities that result from taking into account network effects. These (possibly non-unique) quantities solve the following fixed-point problem which imposes rational expectations:
+\begin{equation*}
+    q=Q(p,q).
+\end{equation*}
+
+Consider the case of a small change in the price of product 1. We are interested in the cross-price derivative that accounts for adjustments in the network structure, $\frac{\partial q_j}{\partial p_1}$.\footnote{We focus on small price changes for analytical convenience, although our empirical estimates use platform deactivations or bans, effectively corresponding to infinite price increases (or increases above the ``choke'' point) and similar to second-choice estimates. These estimates are informative for antitrust investigations but in general differ from those based on small price changes which are used in market definition tests \citep{reynolds2008use,conlon2021empirical}. For example, the standard small but significant and non-transitory increase in price (SSNIP) analysis measures whether a 5\% price rise diverts enough users to render the increase unprofitable. The network adjustment associated with such a  price increase is likely much smaller than that of a full-scale ban. Note also that these derivatives might not be well-defined if the fixed point problem has multiple solutions.} This parameter is a crucial input for computing diversion ratios \citep{conlon2021empirical} and, hence, for market definition exercises such as critical-loss analysis \citep{katz2002critical}. To understand how network effects change measured substitution patterns, we compare this derivative to the ``fixed-network'' derivative $\frac{\partial Q_j}{\partial p_1}$ which is computed holding the network sizes fixed. 
+
+To fix ideas, consider a canonical  model of network effects à la \cite{katz1985network}, with a continuum of individuals who must choose one of two products. Individual $i$'s utility from choosing $j$ is quasilinear in money and is increasing in the size of the network, $q_j$:
+\begin{equation*}
+    u(q_j)+\gamma_j^i-p_j,
+\end{equation*}
+where $u$ is a smooth function and $\gamma_j^i$ is the heterogeneous ``membership'' benefit from joining network $j$. We assume that $u$ is increasing, to capture positive network effects. We also assume that the net benefit from joining network 1, $\gamma^i:=\gamma_1^i-\gamma_2^i$, is distributed according to a smooth distribution with density $f$ with full support and that network effects are ``small enough''---which we formalize by  imposing the following bound: $u'(q_j)<\left(2\|f\|_\infty\right)^{-1}$. 
+
+In this case, there is a unique equilibrium and the difference  $\frac{\partial q_2}{\partial p_1}-\frac{\partial Q_2}{\partial p_1}$ equals $\frac{2f^2}{1-2fu'(q_j)}\times u'(q_j)$, which is proportional to $u'(q_j)$, a positive number.\footnote{To show uniqueness, note that the equilibrium is given by the fixed point problem $q_2^*=F(u(q_2^*)-u(1-q_2^*)+p_1-p_2):=\phi(q_2^*)$, since $q_1^*=1-q_2^*$. Given that $|\phi'|=2fu'<1$ by our bound on $u'$, there is a unique equilibrium by the Banach Fixed Point Theorem.} In other words, the fixed-network derivative will underestimate the degree of substitution between both products. Intuitively, when the price of 1 increases, there is a direct increase in the demand for product 2---and a corresponding decrease in the demand for 1---holding network effects constant, which is captured in the fixed-network derivative. However, this derivative ignores the subsequent impact on the demand for 2 due to the change in the network of both products. The partial increase in the demand for 2 will further increase the demand for 2 due to own-network effects. Additionally, the partial decrease in the demand for 1 will reinforce this effect due to cross-product network effects---product 2 becomes relatively more attractive since fewer people choose 1. Therefore, both own-network and cross-product network effects contribute to the bias of the fixed-network derivative.
+
+More generally, network effects cause the fixed-network derivatives to differ from the relevant cross-price derivatives, sometimes even resulting in opposite signs. Focusing on locally-stable equilibria (where the matrix $I-\frac{\partial Q}{\partial q}$ is invertible), the cross-price derivatives that account for network effects are: 
+\begin{equation*}
+    \frac{\partial q}{\partial p_1}=\left(I-\frac{\partial Q}{\partial q}\right)^{-1}\frac{\partial Q}{\partial p_1},
+\end{equation*}
+which in general differ from the fixed-network derivatives $\frac{\partial Q}{\partial p_1}$ unless there are no network effects, $\frac{\partial Q}{\partial q}=0$. 
+
+To understand the magnitude and sign of the gap, we focus on the two-product case:
+\begin{equation}\label{eq:elasticities}
+    \frac{\partial q_{2}}{\partial p_{1}}
+=
+\frac{
+\frac{\partial Q_{2}}{\partial q_{1}}
+\frac{\partial Q_{1}}{\partial p_{1}}
++
+\left(1-\frac{\partial Q_{1}}{\partial q_{1}}\right)
+\frac{\partial Q_{2}}{\partial p_{1}}
+}{
+\left(1-\frac{\partial Q_{1}}{\partial q_{1}}\right)
+\left(1-\frac{\partial Q_{2}}{\partial q_{2}}\right)
+-
+\frac{\partial Q_{1}}{\partial q_{2}}
+\frac{\partial Q_{2}}{\partial q_{1}}
+}.
+\end{equation}
+Consider a scenario when two products are substitutes based on the fixed-network derivatives, $\frac{\partial Q_{2}}{\partial p_{1}}>0$. We focus on the commonly-studied case of locally-stable equilibria with positive own-network effects, assuming that the network effects are small enough such that the denominator is positive.\footnote{Concretely, assume that $\frac{\partial Q_j}{\partial q_j}<1$, that $\frac{\partial Q_j}{\partial q_k}$ and $\frac{\partial Q_k}{\partial q_j}$ have the same sign, and that the denominator in \eqref{eq:elasticities} is positive.} In this case, the sign of the difference $\frac{\partial q_2}{\partial p_1}-\frac{\partial Q_2}{\partial p_1}$ will largely depend on the sign of the cross-product network effects, $\frac{\partial Q_j}{\partial q_k}$.  When cross-product network effects are zero, the fixed-network derivatives will \textit{underestimate} the strength of substitution to product 2: they ignore that an initial increase in the demand for product 2 will be further amplified by positive own-network effects. A similar underestimation occurs when cross-product network effects are negative: fixed-network estimates ignore the decrease in the demand for product 1 which further increases the demand for product 2. On the other hand, when cross-product network effects are positive and large enough (and demand for 1 is sufficiently elastic),\footnote{This case requires: $\frac{\partial Q_2}{\partial q_1}\left(\left|\frac{\partial Q_1}{\partial p_1}\right|-\frac{\partial Q_1}{\partial q_2}\frac{\partial Q_2}{\partial p_1}\right)>\frac{\partial Q_2}{\partial p_1}\left(1-\frac{\partial Q_1}{\partial q_1}\right)\frac{\partial Q_2}{\partial q_2}$. The right-hand side of this expression is positive. For the inequality to hold, $\frac{\partial Q_2}{\partial q_1}$ need to be positive and large, and the demand for 1 has to be sufficiently elastic with respect to its own price.} the fixed-network derivatives will \textit{overestimate} the strength of substitution to product 2. Intuitively, fixed-network estimates ignore that the increase in $p_1$ will decrease the demand for 1, which further decreases the demand for 2.  In this case, there can even be a qualitative difference---a change in sign---between the substitution patterns inferred from fixed-network derivatives and the relevant cross-price derivatives.
+
+
+
+\section{Collective versus Individual Valuations}\label{ref:deactivation}
+
+To quantify the role of network effects in shaping substitution patterns, we conducted an experiment shortly before the Supreme Court ruling on the TikTok ban in the United States. The uncertainty surrounding this decision enables us to compare valuations of various social media apps across three plausible scenarios for TikTok’s future: 1) a status quo scenario where TikTok is not banned, 2) a scenario where TikTok is not banned and users individually deactivate their TikTok accounts, and 3) a scenario in which TikTok is banned for all users.
+
+
+\subsection{Study context: TikTok ban in January 2025}
+
+Over the past years, U.S. officials have warned that TikTok could be used by the Chinese government to collect sensitive information or influence public opinion. These national security concerns over foreign access to Americans’ personal data prompted Congress to pass a ``sell-or-ban'' law against TikTok in April 2024. The law required ByteDance, TikTok’s parent company, to sell its U.S. operations within nine months or face a nationwide ban starting January 19, 2025.
+
+TikTok challenged the law in court, culminating in a critical Supreme Court hearing on January 10th, 2025. Nevertheless, the Supreme Court upheld the law on January 17, 2025, affirming the government’s authority to act on national security grounds. A shutdown was widely expected, and TikTok suspended its U.S. operations on January 18, 2025. Two days later, President Trump signed an executive order delaying enforcement for 75 days to allow for TikTok to negotiate with potential American buyers.
+
+As a result, leading up to the ban, American TikTok users were plausibly uncertain about their ability to use TikTok after January 19, providing us an opportunity to leverage this policy uncertainty for our experiment in early January 2025.\footnote{For press coverage, see ``TikTok starts restoring service in the U.S. after shutting down over ban concerns'' \citep{CBSNews2025}.}
+
+\subsection{Sample}
+
+\paragraph{Sample characteristics} We recruited \NumRespondents\space respondents from the online survey provider Prolific between January 6 and January 9, 2025, prior to the Supreme Court appeal on January 10.\footnote{For popular press coverage, see ``Supreme Court appears inclined to uphold TikTok ban in U.S.'' \citep{Reuters2025}.} Our sample consists of participants from the U.S. aged between 18 and 27 who own iPhones and are active TikTok users.\footnote{We recruit iPhone users as we require screenshots from Screen Time usage to monitor phone app deactivation, which is simplified on iOS devices.} We focus on this demographic as young adults are among the most active on social media platforms, and especially on TikTok. Indeed, as of 2022, approximately 54\% of U.S. adults aged 18-29 use TikTok, compared to 25\% for all other age groups \citep{pew2022atp}. Among participants who began our survey, \ShareTiktokUsers\space were active TikTok users. From these participants, \DeactivationAgreeRate\space agreed to participate in the four-week deactivation study, which would require them, if selected, to upload screenshots of their iPhone screen time usage to verify deactivation compliance. While this restriction implies sample selection, the degree of selection is smaller than in existing deactivation studies.\footnote{We chose not to pre-specify the apps that participants may be asked to deactivate prior to consent to minimize concerns over differential attrition. Indeed, we find that the attrition rate at the consent stage is \InstagramAttritionRate, \YouTubeAttritionRate, and  \SnapchatAttritionRate\space for Instagram, YouTube, and Snapchat, respectively. These differences are not statistically significant.} After the consent process, the survey includes two comprehension checks on the method of compliance and the length of the deactivation---correctly answered by \ComprehensionComplianceMethodRate\space and \ComprehensionLengthDeactivationRate\space of participants, respectively.\footnote{We do not collect data for participants who fail either of these questions, as pre-specified.} 
+
+\paragraph{Summary statistics} 
+
+Our sample includes \ShareFemale\space female participants, similar to the proportion of U.S. TikTok users aged 18-29 who are female (60.0\%; \citealt{pew2022atp}). The average age is \AverageAge\space years old. Additionally, \ShareStudents\space of participants are students and \ShareSingle\space are single. At baseline, respondents self-report spending an average of \AverageMinutesTiktok\space minutes per day on TikTok, with \ShareTiktokDaily\space using the platform daily. On average, participants also self-report spending an average of \AverageMinutesYouTube\space minutes per day on YouTube, \AverageMinutesInstagram\space minutes on Instagram, and \AverageMinutesSnapchat\space minutes on Snapchat.\footnote{However, we note that self-reported usage measures may be unreliable in general and thus these values should be interpreted with caution.} Based on these figures, \MultiHomeRateTTInstagram, \MultiHomeRateTTYouTube, and \MultiHomeRateTTSnapchat\space of our sample are multi-homers on TikTok and Instagram, TikTok and YouTube, and TikTok and Snapchat, respectively.\footnote{These values are fairly close to what is observed among active TikTok users in the American Trends Panel survey \citep{pew2024socialmedia}, where there are multi-homing rates of 88\%, 96\%, and 79\% on TikTok with Instagram, YouTube, and Snapchat, respectively.}
+
+\paragraph{Pre-registration} The pre-registration for the data collection can be found on AsPredicted $\#206616$.\footnote{For details, see \url{https://aspredicted.org/d55q-yw33.pdf}. There were no deviations from what was pre-registered.} It provides information on the study design, hypotheses, primary and secondary outcomes, sample size, and criteria for excluding participants from the sample.
+
+\subsection{Design}
+
+Our design aims to measure participants' valuation of their focal app that could be a substitute for TikTok. In particular, it allows us to evaluate how the valuations of these focal apps depend on whether TikTok consumption is reduced individually or collectively. Figure \ref{fig:deactivate-structure} presents an overview of the experimental design. Details on the experimental instructions are available \href{https://raw.githubusercontent.com/fmilojevic/survey_instructions/main/Measuring_Markets_for_Network_Goods_Instructions.pdf}{here}.
+
+\begin{figure}[!h]
+    \begin{center}
+    \caption{Structure of the experiment: TikTok Ban Study}  
+    \label{fig:deactivate-structure}
+    \includegraphics[width=0.6\linewidth]{figures_additional/TikTok-Tikz.png}
+    \end{center}
+     \captionsetup{font=small} % 
+    \caption*{\raggedright \textit{Notes:} Figure \ref{fig:deactivate-structure} displays the structure of our experiment. Participants begin by receiving information about the upcoming TikTok ban and subsequently answer questions regarding their anticipated time substitution patterns to social apps. Next, the survey provides instructions for the BDM mechanism, followed by the elicitation of participants' WTA for individually deactivating TikTok in the absence of a ban. Participants are then randomly assigned one of three focal apps (Instagram, YouTube, or Snapchat), after which their WTA is elicited under three distinct scenarios. Initially, participants indicate their WTA for deactivating their focal app assuming that no TikTok ban occurs. Subsequently, the individual TikTok deactivation scenario (participants are asked to individually deactivate TikTok when no TikTok ban occurs) and the TikTok ban scenario (TikTok is banned in the U.S.) are presented in random order. In each scenario, participants specify their WTA to deactivate the focal app. The study concludes with participants providing qualitative responses on anticipated substitution to non-social activities, network effects, and social media use, and demographic questions. In the schematic diagram, yellow boxes denote embedded data, blue boxes indicate question sections, and pink boxes highlight randomization points.}
+\end{figure}
+
+
+\paragraph{Background Information on the Ban} We begin the experiment by providing all respondents with information about the potential TikTok ban in the U.S.:
+\begin{quote}
+Over the past year, U.S. lawmakers and officials have expressed concerns about data privacy and misinformation on TikTok, which is owned by the Chinese company ByteDance.
+
+In April, the U.S. government enacted a law requiring TikTok to be sold to another company or face a ban on operating in the United States.
+
+The ban is scheduled to take effect on January 19th, 2025. However, the Supreme Court has agreed to hear TikTok's appeal on January 10th. As a result, it is possible that TikTok will be banned for all users in the United States on January 19th.
+\end{quote}
+
+
+\paragraph{WTA Elicitation Instructions}
+
+Next, we explain our WTA elicitation method to respondents, designed to measure their valuation of their focal app. We employ a BDM elicitation method, which is explained to respondents in simple terms. Specifically, we ask participants to indicate the minimum amount of money they would require to deactivate their focal app for four weeks under each scenario. We allow for an upper limit of \$500 and a lower limit of \$0.\footnote{We have minimal top or bottom coding issues as we find that only \TopCodingRate\space of respondents enter \$500 and only \BottomCodingRate\space enter \$0.} A series of best practices are implemented in our elicitation process. First, we include a practice app (Facebook) to familiarize respondents with the BDM elicitation when presenting the instructions. Second, we ensure high data quality by only allowing respondents who pass a comprehension question on the BDM elicitation to participate in the experiment.\footnote{As pre-specified, we do not collect data for participants who fail the BDM comprehension check. \BDMFailRate\space of participants fail this check.} Third, we ask respondents whether they agree with the valuation implied by their responses. If respondents disagree with their initial valuation, they are given the opportunity to retake the question once.\footnote{If respondents disagree a second time, they proceed with the survey, and their second attempt is recorded as their final response. As pre-specified, we exclude them from our analysis. Reassuringly, across all elicitations, we find that only \ElicitationsRegretFirstRate\space of first choices are regretted and only one respondent regrets their choice twice.} We incentivize our experiment by informing participants that 1 in 10 respondents will be randomly selected to take part in the study, for the scenario based on whether the TikTok ban is implemented on January 19th, 2025. Each selected respondent is invited to participate in the deactivation if their randomized BDM draw exceeds their stated WTA for that scenario. Respondents receive the randomized BDM draw as compensation upon successfully complying with the deactivation.\footnote{Our methodology therefore also relates to the literature on contingent valuation in economics that measures the value of non-market goods through hypothetical surveys but has been shown to be subject to hypothetical bias \citep{landry2007using,list2001explicit}. We address this bias by exploiting real policy uncertainty surrounding a potential TikTok ban to incentivize our experiment.} 
+ 
+
+\subsubsection{Deactivation Scenarios}
+
+Our experiment then examines how people value their focal app under three different scenarios. Each participant is randomly assigned one of either Instagram, YouTube, or Snapchat as their focal app.
+
+\paragraph{No TikTok ban scenario}
+
+We start with the \textit{no TikTok ban} scenario, which serves as our baseline, where TikTok remains fully available. Participants are asked how much compensation they would require to deactivate their focal app for four weeks. Specifically, respondents are provided with the following instructions:
+\begin{quote}
+Assume that TikTok wins the appeal and remains available to all users in the U.S. after January 19th.
+
+In this scenario, how much would we need to pay you (in U.S. dollars) to deactivate your  [focal app] account for four weeks?    
+\end{quote}
+
+\noindent Next, we elicit respondents' valuations of the focal app under two additional scenarios, presented in random order.
+
+
+\paragraph{Individual TikTok deactivation scenario}
+
+The \textit{individual TikTok deactivation} scenario enables us to measure how a respondent’s valuation of a focal app changes when they personally lose access to TikTok, holding others' consumption fixed. Here, TikTok is not banned for the general public, but the respondent is asked to deactivate their personal TikTok account for four weeks in exchange for a monetary payment exceeding their previously stated valuation.\footnote{Before measuring their valuation of the focal app in the three scenarios, we elicit how much compensation respondents require for an individual TikTok deactivation in an incentivized manner. This allows us to credibly identify valuations of focal apps for the scenario of an individual TikTok deactivation.} We then ask how much additional compensation they would require to also deactivate their focal app. Participants receive the following instructions:
+\begin{quote}
+Assume that TikTok wins the appeal and remains available to all users in the U.S. after January 19th. This means the general public in the U.S. can continue using TikTok as usual.
+
+Additionally, assume the random draw exceeds the valuation you provided to deactivate TikTok for four weeks in a previous question, and we ask you to deactivate your TikTok in exchange for this payment.
+
+In this scenario, how much additional money would we need to pay you (in U.S. dollars) to also deactivate your [focal platform] account for four weeks?\footnote{In the individual TikTok deactivation scenario, participants are paid to deactivate their personal TikTok accounts, ensuring that the focal app deactivation is incentivized. As a result, there is a potential income effect for those in the individual TikTok deactivation group. Consistent with the previous literature, we find it plausible that income effects are small. Moreover, our self-reported time-use intentions are immune to income effects, yet they exhibit the same qualitative patterns as our incentivized measures. This suggests that income effects are unlikely to be quantitatively large in our experiment.}
+\end{quote}
+
+\paragraph{TikTok ban scenario}
+
+Finally, the \textit{TikTok ban} scenario entails a situation in which TikTok becomes unavailable to all U.S. users. This scenario allows us to examine how focal app valuations shift when there is a collective TikTok ban, which allows us to isolate the role of network effects on respondents' valuations, when compared to the individual scenario. Participants in this condition are told:
+\begin{quote}
+Assume that TikTok loses the appeal and is banned in the U.S. on January 19th. The TikTok ban would apply to everyone in the U.S., including you.
+
+In this scenario, how much would we need to pay you (in U.S. dollars) to deactivate your [focal app] account for four weeks?    
+\end{quote}
+
+\paragraph{Design Discussion}
+
+
+The key advantage of our approach is that it measures participants’ incentivized---rather than hypothetical---valuations in a scenario where both an individual and collective deactivation are plausible outcomes, due to the substantial legal uncertainty. This uncertainty is reflected in respondents' perceived likelihood of the ban occurring, as well as in predictions from Polymarket, one of the world's largest live prediction markets, at the time of our experiment. In particular, we find that participants, on average, assign a \EstTiktokBanLikelihood\space likelihood to the TikTok ban taking place, closely aligned to the average perceived likelihood of 42\% on Polymarket at that time, as seen in Appendix Figure \ref{fig:betting}.
+
+
+
+An important feature of our experimental design is its ability to facilitate within-subject comparisons. Specifically, the design allows us to observe how valuations change across three distinct scenarios: (1) no deactivation, (2) individual TikTok deactivation, and (3) collective deactivation. Additionally, employing a within-subject comparison enhances our statistical power, especially since we aimed to elicit valuations for multiple platforms but faced limitations due to Prolific’s sample-size constraints for our target demographic.
+
+
+\subsubsection{Focal Apps}
+
+We consider three popular focal apps in the experiment: Instagram, YouTube, and Snapchat. These platforms were chosen since network effects may play an important role for substitution patterns given their established presence as content-sharing platforms that, to varying degrees, share some functional similarities with TikTok.
+
+\paragraph{Instagram}
+
+Instagram shares numerous relevant characteristics with TikTok. Both platforms contain visually engaging, short-form content and encourage user interaction through algorithmically curated feeds. TikTok's ``For You'' page provides highly personalized content discovery, while Instagram's discovery features, such as Reels and hashtag-based browsing, fulfill a similar function. Both platforms prominently feature creator-driven trends and influencer engagement. Additionally, both Instagram and TikTok users maintain personal profiles to post content for their followers. Instagram also allows for interactions within users' social networks through direct messaging, story responses, and interactive features such as polls and Q\&A sessions, facilitating meaningful social engagement among friends and followers.
+
+\paragraph{YouTube}
+
+YouTube also shares key similarities with TikTok, with both platforms centering on user-generated video content, employing algorithmic feeds to drive engagement, and offering monetization tools to attract and retain creators. Furthermore, YouTube Shorts—launched in 2020 following TikTok's ban in India\footnote{"YouTube Shorts launches in India after Delhi TikTok ban" \citep{Guardian2020}.}—significantly enhanced YouTube’s competitive position in the short-form video segment. Although YouTube offers social engagement features such as comments, channel subscriptions, community posts, and live chats, these interactions typically occur within broader, interest-based communities rather than strongly emphasizing direct interactions within users' local friendship networks.
+
+\paragraph{Snapchat}
+
+Snapchat is known for its ephemeral messaging and highly personal interactions within users' own social networks, differing from the previously mentioned platforms. In particular, Snapchat's core functionality revolves around immediate, direct communication with friends through snaps, private messaging, stories targeted at specific social circles, and group interactions. Snapchat also has Spotlight, which is used to promote viral Snapchat videos from creators. However, while the format is similar to TikTok's ``For You'' page, the social environment differs as there are limited interactions (e.g., no comments section).
+
+%This strong emphasis on personal, localized social connection makes Snapchat particularly suited as an alternative for users seeking heightened direct social engagement if TikTok were banned.
+
+
+
+\subsection{Results}\label{sec:results}
+
+\subsubsection{Incentivized Valuation of Other Platforms}
+
+
+
+As pre-registered, our main analysis focuses on the proportion of respondents with higher, equal, or lower valuations across the different scenarios, as these measures are robust to concerns about measurement error in continuous WTA elicitations. For ease of exposition, Figure \ref{fig:prop_net_subs} displays the differences in valuations across three platforms when TikTok is individually deactivated or collectively banned compared to the no ban scenario. Each color reports the fraction of individuals whose WTA for a focal app is higher or lower under one treatment scenario relative to another. The values above the bars report the difference between the two bars, indicating the net fraction of responses with a higher valuation. Positive net values indicate that, on net, more individuals place higher value on the focal app under one scenario compared to another, suggesting stronger substitutability between that platform and TikTok. 
+We present three sets of comparisons. The two light blue bars per platform indicate the fraction of participants whose willingness to accept (WTA) for the focal app differs under the \textit{individual TikTok deactivation} scenario relative to the \textit{no TikTok ban} scenario.\footnote{The remaining fraction indicates equal WTA across scenarios.} The green bars present comparisons between the \textit{TikTok ban} scenario and the baseline \textit{no TikTok ban} scenario. Lastly, the dark blue bars show analogous comparisons between the \textit{TikTok ban} and the \textit{individual TikTok deactivation} scenarios.
+
+We begin by examining valuations under individual TikTok deactivation compared to the no TikTok ban scenario. Figure \ref{fig:prop_net_subs} displays, for each focal app, the net difference between the proportions of participants who exhibit higher versus lower WTA under individual deactivation compared to no ban. We observe substantial positive net effects for Instagram (\NFInstagramIndNoban\ p.p., $p<0.01$) and YouTube (\NFYouTubeIndNoban\ p.p., $p<0.01$), indicating that TikTok tends to be a substitute for these platforms absent network considerations. Conversely, Snapchat shows no significant net effect, suggesting it is equally perceived as a substitute and complement among participants.\footnote{For some users, TikTok and the focal platforms may function as complements across our pairwise scenario comparisons, due to cross-platform content sharing and complementarities in content creation and consumption.}
+
+Next, we analyze overall valuation changes by comparing the TikTok ban scenario to the no TikTok ban baseline. Instagram, YouTube, and Snapchat all exhibit large and positive net valuation increases (\NFInstagramBanNoban\space p.p., \NFYouTubeBanNoban\space p.p., and \NFSnapchatBanNoban\space p.p., respectively). This indicates that banning TikTok substantially enhances valuations for these focal apps relative to a scenario without a ban.
+
+Finally, we turn to our core interest---network effects. The dark blue bars show significant positive differences for Instagram (\NFInstagramBanInd\space p.p.) and YouTube (\NFYouTubeBanInd\space p.p.), indicating that valuations rise substantially when TikTok deactivation occurs collectively rather than individually. The distinguishing factor between these scenarios is the change in participants' network sizes on TikTok and the focal apps, highlighting the significant role of network effects in determining app valuation.
+
+
+Notably, Snapchat exhibits a somewhat different pattern. While its net share under individual TikTok deactivation is negligible (\NFSnapchatIndNoban\space p.p.), valuations become significantly higher under a collective TikTok ban, both compared to individual deactivation (\NFSnapchatBanInd\space p.p.) and relative to the no TikTok ban scenario (\NFSnapchatBanNoban\space p.p.). This shift underscores that coordinated user movements due to collective deactivation transform Snapchat into a stronger substitute for TikTok. 
+%Given Snapchat’s messaging-oriented nature, network coordination appears crucial. Thus, individual TikTok deactivation, leaving networks unchanged, does not immediately enhance Snapchat’s value.
+\footnote{We further explore treatment effect heterogeneity for Snapchat by comparing multi-homers (73\% of the sample), who use both Snapchat and TikTok at baseline, with TikTok-only users. We find the net fraction of multi-homers reporting higher valuations under collective versus individual deactivation is significantly larger (\NFMultiHomersSnapchatBanInd\space p.p.) than among TikTok-only users (\NFSingleHomersSnapchatBanInd\space p.p.). This could indicate that network effects primarily influence Snapchat on the intensive margin. We do not examine this heterogeneity for Instagram and YouTube, as the vast majority of participants are already multi-homers.}
+
+
+Collectively, our findings suggest that coordinated TikTok deactivation leads significantly more users to substitute toward alternative platforms, emphasizing network effects’ role in broadening market boundaries within social apps. The difference between the collective and individual treatments is particularly stark in the case of Snapchat.
+%Snapchat's unique response under collective versus individual treatments is particularly insightful, highlighting the qualitative importance of network effects.
+
+
+\begin{figure}[] 
+\caption{Fraction with Higher or Lower Valuation By Scenario}
+ \label{fig:prop_net_subs}
+
+  \centering
+  \begin{subfigure}[b]{0.7\linewidth}
+    \centering
+    \caption{Instagram}
+    \includegraphics[width=0.73\textwidth]{output_tiktok/figures/valuation_fractions_Instagram.pdf}
+  \end{subfigure}
+  \\
+  \begin{subfigure}[b]{0.7\linewidth}
+    \centering
+    \caption{YouTube}
+    \includegraphics[width=0.73\textwidth]{output_tiktok/figures/valuation_fractions_YouTube.pdf}
+  \end{subfigure}
+  \\
+  \begin{subfigure}[b]{0.7\linewidth}
+    \centering
+    \caption{Snapchat}
+    \includegraphics[width=0.73\textwidth]{output_tiktok/figures/valuation_fractions_Snapchat.pdf}
+  \end{subfigure}
+  \\
+  \begin{subfigure}[b]{0.8\linewidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{output_tiktok/figures/valuation_fractions_legend.pdf}
+    \label{fig:legend}
+  \end{subfigure}
+  \begin{minipage}{1\linewidth} \scriptsize  \emph{Notes:} By platform, Figure \ref{fig:prop_net_subs} illustrates differences in the valuation of focal apps across three scenarios: no TikTok ban, individual TikTok deactivation, and a TikTok ban. Panel a) is for Instagram, b) for YouTube, and c) for Snapchat. For each platform, the light blue bars show the proportion of individuals who have a higher or lower WTA to deactivate their focal app during individual TikTok deactivation compared to the no TikTok ban scenario. The value above the two bars displays the net fraction with a higher WTA.  The green bars display the same proportions when comparing the collective TikTok ban compared to the no TikTok ban scenario. Similarly, the dark blue bars present the same proportions when comparing the TikTok ban to individual TikTok deactivation. The error bars represent 95\% confidence intervals.
+\end{minipage}
+\end{figure}
+
+\paragraph{Average Willingness to Accept (WTA).} Next, we present pre-registered analyses of average differences in valuations of the focal apps, which measure the overall intensity of respondents' preferences. Figure \ref{fig:cts_net_subs} summarizes how average valuations differ across three key scenarios: individual TikTok deactivation, a complete TikTok ban, and the no TikTok ban baseline.\footnote{Appendix Figures \ref{fig:inverse-demand-youtube} through \ref{fig:inverse-demand-snapchat} provide inverse demand curves, both pooled and disaggregated by platform, as an alternative visualization.}
+
+The light blue bars illustrate relatively modest valuation differences between the individual TikTok deactivation and the no TikTok ban scenarios. Specifically, these differences amount to \WTAInstagramIndNoban\space ($\WTAInstagramIndNobanSigLevel$) for Instagram, \WTAYouTubeIndNoban\space ($\WTAYouTubeIndNobanSigLevel$) for YouTube, and \WTASnapchatIndNoban\space ($\WTASnapchatIndNobanSigLevel$) for Snapchat.
+
+In contrast, the light green bars indicate considerably larger differences when comparing the TikTok ban scenario with the no ban baseline. Respondents' WTA to deactivate each focal app under a TikTok ban increases significantly: by \WTAInstagramBanNoban\space ($\WTAInstagramBanNobanSigLevel$) for Instagram, \WTAYouTubeBanNoban\space ($\WTAYouTubeBanNobanSigLevel$) for YouTube, and \WTASnapchatBanNoban\space ($\WTASnapchatBanNobanSigLevel$) for Snapchat.
+
+Finally, the dark blue bars isolate the impact of network effects by comparing the complete TikTok ban to individual TikTok deactivation. Collective deactivation increases respondents' WTA by \WTAInstagramBanInd\space ($\WTAInstagramBanIndSigLevel$) for Instagram, \WTAYouTubeBanInd\space ($\WTAYouTubeBanIndSigLevel$) for YouTube, and \WTASnapchatBanInd\space ($\WTASnapchatBanIndSigLevel$) for Snapchat. These network-induced valuation increases correspond to \WTAInstagramBanIndRatio, \WTAYouTubeBanIndRatio, and \WTASnapchatBanIndRatio, respectively, relative to baseline valuations in the no TikTok ban scenario. Taken together, we find that ignoring network effects leads to an underestimation of substitutability with social apps and even produces qualitatively different conclusions about whether Snapchat is a net substitute for TikTok.
+
+
+
+We next interpret the effect sizes comparing the difference between collective and individual TikTok deactivation to the difference between the collective deactivation and the no TikTok ban scenario. For Instagram, \InstagramNetworkEffectRatio\space of the valuation increase for the focal app under a TikTok ban can be attributed to the collective component of deactivation. For Snapchat and YouTube, these shares are \SnapchatNetworkEffectRatio\space and \YouTubeNetworkEffectRatio, respectively. The relative importance of network effects aligns closely with the role of non-anonymous interactions on each platform: personal social networks play a more limited role on YouTube, are more significant on Instagram, and are essential for Snapchat. Taken together, these patterns underscore that the collective component, which accounts for network effects, represents over half of the total increase in valuation of the focal apps under the TikTok ban.
+
+\begin{figure}[H]
+    \centering
+        \caption{Average Difference in Valuations Across Scenarios by Platform}
+
+\includegraphics[width=\textwidth]{output_tiktok/figures/valuation_differences.pdf}
+    
+      \label{fig:cts_net_subs}
+     \begin{minipage}{1\linewidth} \scriptsize  \emph{Notes:} Figure \ref{fig:cts_net_subs} illustrates the differences in continuous valuations of the focal app across our three scenarios. The light blue bars depict the average difference between valuations under the individual TikTok deactivation scenario and the no TikTok ban scenario. The green bars represent the average difference in respondents’ valuations between the TikTok Ban scenario and the no TikTok ban scenario. The dark blue bars show the difference in average valuation between the TikTok ban and the individual TikTok deactivation scenario. The error bars indicate 95\% confidence intervals.
+\end{minipage} 
+    
+    
+\end{figure}
+
+
+\subsubsection{Self-reported Substitution Intentions}\label{sec:selfreports}
+
+While the previous results provide incentivized estimates on substitution patterns in terms of platform valuation, they do not directly speak to changes in time use. Given that advertising is the primary revenue source for most social media platforms, it is natural to consider a more direct measure of quantity: the time users spend on the platform. We therefore examine respondents’ self-reported substitution intentions. 
+
+
+Figure \ref{fig:net_substitution} shows the proportions of respondents who expected to spend more or less time on a given activity under collective versus individual TikTok deactivation.\footnote{We define the net substitution as the percentage of respondents intending to spend more time on a given activity under collective TikTok deactivation minus the percentage intending to do so under individual TikTok deactivation.} First, we find that people predict spending more time on other social apps. In particular, we find a net positive difference of \BanSubstitutionInstagram\space p.p. ($\BanSubstitutionInstagramSigLevel$), \BanSubstitutionYouTube\space p.p. ($\BanSubstitutionYouTubeSigLevel$), and \BanSubstitutionSnapchat\space p.p. ($\BanSubstitutionSnapchatSigLevel$) of respondents who expect to spend more time on Instagram, YouTube, and Snapchat, respectively, under a ban relative to an individual TikTok deactivation of TikTok.\footnote{Note that differences in time use need not align with differences in valuation, as shown in \cite{beknazar2024model}.} In contrast, we find evidence that people predict spending more time on non-social activities under the individual TikTok deactivation, such as playing phone games or meditating, where we find a net difference of $\BanSubstitutionGames$ p.p. ($\BanSubstitutionGamesSigLevel$) and $\BanSubstitutionMeditation$ p.p., respectively ($\BanSubstitutionMeditationSigLevel$). We also find that people plan to spend somewhat less time on their laptop in the individual TikTok deactivation scenario, but this effect is not statistically significant ($\BanSubstitutionLaptopSigLevel$). 
+
+
+Our estimates suggest that digital social platforms, broadly defined, become closer substitutes to TikTok once network effects are considered, increasing the likelihood that they belong in the relevant market. Individual-level interventions thus underestimate substitution toward other social apps. At the same time, non-social digital activities appear to be less close substitutes for TikTok after accounting for network effects. 
+
+
+
+
+\begin{figure}[!h]
+    \centering
+        \caption{Fraction with Higher or Lower Predicted Time Spent Under Collective vs. Individual Deactivation}
+    \includegraphics[width=\textwidth]{output_tiktok/figures/predicted_time_fractions.pdf}
+    \label{fig:net_substitution}
+     \begin{minipage}{1\linewidth} \scriptsize  \emph{Notes:} Figure \ref{fig:net_substitution} illustrates how respondents’ predicted time spent using alternative platforms and on activities differs between the TikTok ban (collective deactivation) and individual TikTok deactivation scenarios. Dark blue bars represent the percentage of respondents who intend to spend more time on a given activity under the TikTok ban scenario compared to the individual TikTok deactivation scenario, while light blue bars represent the percentage who intend to spend more time on the same activity under individual TikTok deactivation. We define net substitution as the difference between these two values. Positive values indicate a net shift toward the activity under the collective TikTok ban scenario, while negative values indicate a shift toward the activity under individual TikTok deactivation. The error bars represent 95\% confidence intervals.
+\end{minipage} 
+\end{figure}
+
+\paragraph{Anticipated time substitution patterns}
+
+To validate the incentivized WTA measure, we collect data on how participants expect their time spent on various social apps to change under an individual TikTok deactivation and a TikTok ban. As shown in Appendix Figure \ref{fig:overall-substitution}, participants anticipate increasing their time spent on other social media platforms in both the individual and collective treatment scenarios. Note that, while qualitatively similar, the estimates in Figure \ref{fig:overall-substitution} differ from those presented in Figure \ref{fig:net_substitution}: the latter displays data based on a question asking respondents to evaluate their likely time spent under a collective versus an individual TikTok deactivation, while Figure \ref{fig:overall-substitution} relies on a question where respondents are asked to evaluate the likely time spent under a collective and an individual TikTok deactivation compared to the no-ban scenario.
+
+
+As shown in Appendix Figure \ref{fig:time-median}, we find that participants who predicted above-median increases in time on their focal app exhibit a  higher WTA for deactivating TikTok, compared to the no TikTok ban scenario, in both the collective ($\BanWTADeltaExpectTimeSigLevel$) and individual ($\IndWTADeltaExpectTimeSigLevel$) treatment conditions. 
+
+\subsection{Anticipated network effects}
+
+To more directly speak to the role of network effects in explaining differences between our individual and collective treatments, we also collect data on participants’ expectations about how their friends would substitute toward other platforms if TikTok were banned. Through the lens of our conceptual framework, these anticipated changes in the network sizes of focal apps following a TikTok ban reflect shifts in both own-platform and cross-platform network effects—the two key mechanisms driving differences in substitution patterns between individual and collective interventions.\footnote{Note, due to a coding error we only collected this data for YouTube for 57\% of participants.} As shown in Figure \ref{fig:anticipated_change}, \InstagramFriendsIncrease, \YouTubeFriendsIncrease, and \SnapchatFriendsIncrease\space of respondents expect their friends to increase time spent on Instagram, YouTube, and Snapchat, respectively, under a TikTok ban compared to current usage levels. These patterns broadly reflect respondents’ expectations of substantial changes in network size of other social apps resulting from collective interventions.
+
+Moreover, as shown in Figure \ref{fig:pooled_ant_network}, we compare average valuation differences across scenarios based on anticipated change in network size. Respondents who anticipated above-median changes in their focal app’s network size due to the TikTok ban exhibited significantly larger shifts in valuations between the TikTok ban and individual TikTok deactivation scenarios than respondents who anticipated below-median changes ($\WTADeltaExpectNetworkSigLevel$). These patterns are consistent with network effects playing an important role in defining markets for network goods.\footnote{This pattern also holds when looking at the individual platforms (see Appendix Figure \ref{fig:ant_network}).}
+
+
+\begin{figure}[!h]
+    \centering
+ \caption{Individual versus Collective Treatment Effect and Anticipated Network Change (Pooled Across Platforms)}
+    \includegraphics[width=0.7\linewidth]{output_tiktok/figures/differences_valuations_by_anticipated_network.pdf}
+    \label{fig:pooled_ant_network}
+     \begin{minipage}{1\linewidth} \scriptsize  \emph{Notes:} We ask respondents a question on their anticipated network change: ``If the TikTok ban happens for everyone in the U.S., the amount of time I would expect my friends to spend on [platform] would...'' with answers being on a 7-point likert scale (``Strongly decrease'', ``Decrease'', ``Slightly decrease'', ``Not change'', ``Slightly increase'', ``Increase'', ``Strongly increase''). The figure displays the average change in WTA between the ban scenario and the individual TikTok deactivation separately for respondents with below- and above-median anticipated changes in their network size. The error bars represent 95\% confidence intervals
+\end{minipage}
+\end{figure}
+
+
+\subsection{Robustness}
+
+\paragraph{Perceived Probability}
+
+
+In normal times, studying incentivized valuations under collective deactivation is difficult because the deactivation may be perceived as having a low probability of occurring. Given the large amount of uncertainty about the TikTok ban, we found it ex ante likely that respondents would perceive the TikTok ban to be relatively plausible. To quantify the perceived credibility of the ban, we directly elicit participants’ beliefs about the probability of the TikTok ban occurring on January 19, 2025. On average, respondents report a perceived likelihood of 46\%. Additionally, this perceived likelihood is similar in magnitude to respondents’ perceived probability (52\%) of being asked to deactivate their TikTok accounts if the ban does not occur and they are selected for the deactivation stage. We show in Appendix Table \ref{tab:wtp_regression_median_split}, Figure \ref{fig:likelihood_ban}, and Figure \ref{fig:likelihood_ind} that our results are robust to focusing on participants with either an above or below median perceived likelihood for either event.
+
+
+
+\paragraph{Dropping regretters} Next, we examine the robustness of our findings depending on whether respondents agree with the valuation implied by their responses. In Appendix Table \ref{tab:wtp_regression_regret} and Figure \ref{fig:noregret-sub}, we show that our estimates are robust to dropping anyone who regrets at least one of their choices in any of the four WTA elicitations ($\ShareRegret$).
+
+
+\paragraph{Order of treatments} Recall that we randomly varied the order in which we presented the TikTok ban and individual TikTok deactivation scenarios during the experiment. We find that our results remain consistent regardless of the order of elicitation in Appendix Table \ref{tab:wtp_regression_tiktok_individual}, Table \ref{tab:wtp_regression_tiktok_individual_youtube}, Table \ref{tab:wtp_regression_tiktok_individual_snapchat}, Figure \ref{fig:order-insta}, Figure \ref{fig:order-yt}, and Figure \ref{fig:order-snap}. 
+
+
+
+\paragraph{Compliance}
+
+We randomly selected 1 out of 10 participants for the deactivation study. After the random BDM draw, 55 participants were invited to deactivate their focal app based on their reported valuation. A majority (60\%) of participants agreed to participate.\footnote{Since we needed to re-contact participants through the Prolific platform, most of those who did not agree to participate simply did not respond to our message; it is therefore possible they did not see the message.} The compliance rate with the deactivation was 76\%, which provides further support that our design was perceived as credible by participants.\footnote{We monitor compliance by tracking screen time on participants’ iPhones, although we cannot rule out the possibility that participants accessed TikTok using alternative devices. This potential discrepancy represents a possible difference between our individual and collective treatments, as access from any device was fully restricted only during the TikTok ban. Nevertheless, in both treatments, participants could still theoretically access TikTok on laptops by employing VPNs—a common method for circumventing country-specific online restrictions.} Importantly, we find no differential compliance rate across platforms.\footnote{We have a 70\% compliance rate for people in our deactivation group for the YouTube app (7 out of 10), 80\% for people in our deactivation group for the Instagram app (8 out of 10) and 77\% for people in our deactivation group for the Snapchat app (10 out of 13).} Our WTA measure captures the option value of deactivation and therefore there is a chance people do not comply with the TikTok deactivation in the individual deactivation scenario. In Appendix Figure \ref{fig:cts_net_subs_comp}, we also show that our results are robust to this possible concern regarding differences in compliance rates under the collective versus individual deactivation.\footnote{\label{foo:compliance}In particular, we correct for this by assuming the chance of individual TikTok compliance is the same as the average compliance rate (76\%), which is a conservative estimate as it assumes that each phone app compliance is independent. In particular, we adjust the WTA under the individual deactivation by assuming that: $WTP^{YouTube}_{ind, measured} = p \cdot WTP^{YouTube}_{ind, true} + (1 - p) \cdot WTP^{YouTube}_{noban, true}$, where $p$ is the compliance rate.}
+
+
+\subsection{Diversion ratios}\label{sec:dr}
+
+The previous estimates provide evidence on how substitution patterns change after accounting for network effects, but they do not directly map onto parameters commonly used in antitrust analysis, such as diversion ratios.\footnote{The diversion ratio is defined in the U.S. 2010 Horizontal Merger Guidelines as ``the fraction of unit sales lost by the first product due to an increase in its price that would be diverted to the second product'' \citep{DOJFTC2010}.} To address this concern, we provide evidence of a related parameter, the second-choice Wald estimator \citep{conlon2021empirical}, used in practice by some antitrust authorities \citep{CMA2017}. This parameter is given by the gain in users of a focal app (at a given price of this focal app) divided by the lost (original) TikTok users in response to a TikTok deactivation or ban. As \cite{conlon2021empirical} show, the Wald estimator in general differs from the average diversion ratio and is equivalent, under LATE-like assumptions, to the average diversion ratio among ``compliers'' (TikTok users in our surveys who stop using TikTok). 
+
+
+Appendix Figure \ref{fig:combined_wald} (a) presents Wald estimates for Instagram, YouTube, and Snap\-chat, calculated at different levels of the WTA (around 0) to deactivate each of these platforms, as a proxy of their price.\footnote{Diversion ratios and Wald estimators are computed holding the price of alternative products fixed; i.e., measuring the horizontal change in their demand curves at the current market price. In the case of social media, such prices are not available, so we use the WTA to approximate these changes. Given potential noise in the estimation of the WTA (e.g., due to the hassle costs of deactivation),  we compute the Wald estimates on an interval around the ``market price'' of a zero WTA.} That figure shows that the Wald estimates for the focal apps calculated under the collective ban are in general larger than those calculated under the individual deactivation. Indeed, Figure \ref{fig:combined_wald} (b) confirms that this difference is positive and statistically significant for some intervals of the WTA. Put differently, taking these estimates at face value, one might reach different conclusions about substitution patterns from TikTok to other platforms depending on whether this parameter is computed using the individual vs. the collective deactivation data. The Wald estimates computed using data from the individual deactivation suggest there is little substitution to the focal apps while the estimates computed using the ban suggest that these products are substitutes.\footnote{One of the assumptions required to interpret the Wald estimates as the average diversion ratio among compliers is that users single-home, which is clearly violated in our setting. These caveats aside, these calculations are in line with our evidence in the previous parts and suggest that these platforms become \textit{closer} substitutes to TikTok under collective deactivation.}
+%Additionally, our evidence includes only information from existing users of the focal apps, not from non-users.
+
+
+\section{Measuring Substitution Using Collective Time Limits}\label{sec:nomo}
+
+A limitation of our previous analysis is that valuations capture substitution patterns primarily at the extensive margin (usage vs. non-usage), leaving unresolved how these translate into intensive-margin adjustments, such as changes in time allocation. A further concern arises from our elicitation method, which relies on respondents' ability to accurately anticipate the network effects associated with collective deactivations. 
+
+To address these limitations, we examine detailed time-use data derived from a collective social media time-limit intervention by NOMO (No Missing Out), a technology startup. Distinct from prior studies that consider individual-level interventions, our evidence leverages an intervention explicitly collective in nature. This dataset is particularly valuable since collective interventions are challenging to implement, requiring coordinated participation across a large number of users in the same network simultaneously. 
+
+Our main outcome of interest is whether substitution patterns observed in this collective time-limit experiment differ from those documented in prior individual-level social media deactivations in the literature. The results reported here, however, are only descriptive and should be interpreted cautiously given the lack of a randomized counterfactual group.\footnote{Due to potential spillovers, data from University of Chicago students who did not comply with or participate in the challenge would not be an appropriate control group.}
+
+
+\subsection{The Collective Time-Limit Challenge}
+
+\paragraph{Context and Goals}
+In fall 2024 NOMO initiated a two-week-long time limit framed as a challenge at the University of Chicago. This challenge served as a first prototype for the future launch of the app. The primary goal was to curb student usage of Instagram and TikTok by imposing a combined daily usage cap of 60 minutes. The challenge explicitly targeted the university's undergraduate student body, numbering approximately 7,500 students, who were required to enroll via their institutional email addresses. This university setting provides an ideal environment for examining collective interventions, given the significant role campus-based social networks play in shaping social media consumption and the practical challenges of targeting entire networks in other contexts.
+
+%\paragraph{NOMO (No Missing Out)} NOMO Technologies, Inc. is a startup with a mobile application, the NOMO app, which facilitates the deactivation of social media apps and was founded by one of the authors (Bursztyn).\footnote{See \url{https://yesnomo.com} for more information. The app can be downloaded in the iOS app store: \url{https://apps.apple.com/us/app/nomo-no-missing-out/id6475054966} or the Google Play Store: \url{https://play.google.com/store/apps/details?id=com.nomissingout.nomo}.} %Users can join or create groups with friends, set goals for reducing their social media usage, and participate in challenges.
+%Appendix Figure \ref{fig:side_by_side} displays how the ``Less Social media, More Real Life" challenge appeared in the NOMO app.
+
+
+\paragraph{The Collective Challenge}
+
+The challenge was inherently collective for several reasons. Recruitment was primarily conducted via word-of-mouth among friends and targeted classroom visits, making it likely that each participant's friends would also be recruited to the challenge. The deactivation therefore targeted a concentrated and ultimately sizeable share of the university undergraduate population. Additionally, the challenge was administered using a digital platform designed around community-driven challenges, thus making clear to each participant that their recruited friends were subject to the time limit as well.\footnote{The challenge incentivized compliance through a structured reward system. Notably, a collective incentive was implemented: the residential house with the highest proportion of compliant participants received tickets to ``Harry Potter and the Cursed Child." Other incentives included complimentary Starbucks beverages, charitable donations to local animal shelters, and access to Billie Eilish's sold-out Chicago concert.} A total of 808 undergraduates (approximately 11\% of the total undergraduate population) enrolled in the time-limit challenge at the University of Chicago. 
+
+\subsection{Summary Statistics} 
+
+NOMO collected \TrtTotalCollected\space submissions from the participants initially enrolled---\TrtPercentWithData\space of whom used iPhones and submitted screenshot data. After screening out invalid screenshots, we end up with valid screenshot data for \TrtCountWithData\space respondents. We focus our analysis on participants who used at least one of TikTok or Instagram during the pre-treatment week (\TrtPercentWithBaselineUsage), resulting in a final sample of N=\TrtFinalCount\space users. The average age in the challenge sample is \TrtAvgAge\space years, with \TrtPercentFemale\space females.\footnote{The sample consists of \TrtPercentFirstYear\space first-year students, \TrtPercentSecondYear\space second-year students, \TrtPercentThirdYear\space third-year students, and \TrtPercentFourthYear\space fourth year students.}
+
+
+
+\paragraph{Screen Time Measures} We find that during the pre-treatment week, users spent an average of \TrtTotalPreMins\space minutes per day (\TrtTotalPreHours\space hours) across all apps, with TikTok and Instagram—the apps targeted by the collective time limit challenge—accounting for \TrtPreMinsDeact\space minutes (\TrtPreDeactPercent). In the pre-treatment week, participants spent \TrtPreMinsInstagram\space and \TrtPreMinsTikTok\space minutes per day on Instagram and TikTok, respectively. 
+
+
+
+
+\subsection{Results}
+
+\subsubsection{Main Estimates}
+Figure \ref{fig:substitution_patterns} displays changes in time spent in different categories of apps during the two-week time limit challenge compared to the week before the challenge. The figure shows that challenge participants substantially reduced their daily scrolling time of TikTok and Instagram by \TrtMinusFDDailyDeact\space minutes (or \TrtDeactRelativeReduction) compared to the baseline ($\TrtFDDailyDeactSigLevel$). Notably, participants largely substituted this reduction towards increased daily usage of other social apps, broadly defined (e.g. YouTube, Snapchat, LinkedIn, Reddit, Pinterest, Facebook, and X), by approximately \TrtFDDailySocial\space minutes ($\TrtFDDailySocialSigLevel$). We see a modest increase of \TrtFDDailyProd\space and \TrtFDDailyMedia\space minutes for productivity and utility apps (such as Chrome, Gmail, Google Drive, Notion, Outlook, Calendar, Maps, Uber, and Duolingo) as well as entertainment and media apps (such as Netflix, Spotify, Disney+, Hulu, Twitch, ESPN, Pokémon GO, and Candy Crush), respectively. We document relatively muted effects on communication apps (a \TrtFDDailyComm\ minute increase, $\TrtFDDailyCommSigLevel$) and other apps (a \TrtFDDailyOther\ minute increase, $\TrtFDDailyOtherSigLevel$).
+
+Further, Appendix \ref{fig:combined_cdfs_treatment} compares the cumulative distribution functions of time spent on each category from pre-treatment to post-treatment weeks. Overall daily screen time during the study period changes by an average of \TrtWinTotalMinsChange\space minutes or \TrtWinPercentIncreaseTotalUsage\space compared to the baseline week. These substitution patterns suggest that under a collective intervention, which generates changes in network size, students significantly shift their usage towards other social apps relative to other apps. 
+
+
+\begin{figure}[!h]
+    \centering
+    \caption{Substitution Patterns During the Two-Week Time Limit Challenge}
+    \label{fig:substitution_patterns}
+    \centering    \includegraphics[scale=0.5]{output_nomo/first_differences.pdf}
+        \label{fig:nomo-substitution}
+    \hfill
+    \vspace{0.3cm} 
+    \begin{minipage}{0.95\textwidth}
+        \scriptsize 
+        \emph{Notes:} This figure presents the average change in daily minutes spent on app categories during the two-week time limit challenge for participants compared to the previous week. We categorize apps into six groups: (1) ``TikTok \& Instagram," which includes the two apps affected by the 1-hour time limit; (2) ``Other Social Apps," defined as broader social platforms built around user-generated or community-driven content (e.g., YouTube, Snapchat, LinkedIn, Reddit, Pinterest, Facebook, and X); (3) ``Productivity \& Utility Apps,'' defined as applications that support information access, organization, work, study, navigation, or everyday tasks, such as email clients, note-taking tools, browsers, and transport apps (e.g., Chrome, Gmail, Google Drive, Notion, Outlook, Calendar, Maps, Uber, Duolingo); (4) ``Entertainment \& Media Apps,'' defined as applications designed primarily for leisure, including streaming services, music and sports platforms, and mobile games (e.g., Netflix, Spotify, Disney+, Hulu, Twitch, ESPN, Pokémon GO, Candy Crush, PUBG); (5) ``Communication Apps,'' defined as apps centered on interpersonal communication or sharing without a central emphasis on content feeds (most notably Messenger, Messages, WhatsApp, Discord, FaceTime, GroupMe, Slack, and BeReal); (6) All remaining apps and websites are grouped into ``Other Apps.'' A comprehensive list of classified apps is provided in Appendix Section \ref{classification_list}. Error bars represent 95\% confidence intervals.
+    \end{minipage}
+\end{figure}
+
+We can interpret our substitution patterns as Wald estimates following the product unavailability approach from \cite{conlon2021empirical}. As previously mentioned, Wald estimates are closely related to diversion ratios, a key parameter for antitrust analysis.\footnote{\cite{conlon2021empirical} show that the Wald estimator in general differs from the average diversion ratio and is equivalent, under LATE-like assumptions, to the average diversion ratio among ``compliers.'' In our case, we include all participants in the challenge (both full and partial compliers); as a robustness check (see Appendix Section \ref{nomo_robustness}), we re-estimate restricting to compliers only, with very similar results.} With time use data, the Wald estimate is given by the average share of baseline time that is diverted toward a given application during the challenge period. Thus, our substitution estimates directly imply the Wald estimate to other social apps is \TrtFDSubPercentSocial. A comprehensive list of category definitions and classified apps can be found in Appendix Section \ref{classification_list}. 
+
+%\subsubsection{Dynamics of Diversion} \label{sec:DoD}
+
+Since network effects might unfold gradually rather than instantaneously as users observe and respond to peer adoption decisions, the aggregate Wald estimates documented above might underestimate the longer-term substitution patterns. Consistent with this hypothesis and displayed in Figure \ref{fig:by_week}, the substitution rate in week 1 is \TrtFDSubPercentSocialWeekOne, whereas in week 2 it increases to \TrtFDSubPercentSocialWeekTwo. Although we lack statistical power to distinguish differences in Wald estimates across these two weeks, the observed increase highlights the importance of leveraging variation in collective time use sustained over longer durations to accurately measure substitution dynamics.
+
+
+
+
+%although we lack statistical power.
+%, the observed increase aligns with the notion that coordination on alternative social apps may unfold gradually. This pattern highlights the importance of leveraging variation in collective time use sustained over longer durations to accurately measure substitution dynamics.
+
+%A consideration absent from the preceding analysis is that network effects might unfold gradually rather than instantaneously. Specifically, substitution toward alternative social apps may initially be modest but increase over time as users observe and respond to peer adoption decisions. Consequently, the aggregate Wald estimates documented above might underestimate the longer-term substitution patterns. 
+
+%To explore this hypothesis, Figure \ref{fig:by_week} investigates the dynamics of substitution by examining changes separately in week 1 and week 2 of the challenge period. The substitution rate in week 1 is \TrtFDSubPercentSocialWeekOne, whereas in week 2 it increases to \TrtFDSubPercentSocialWeekTwo. Although we lack statistical power to distinguish differences in Wald estimates across these two weeks, the observed increase aligns with the notion that coordination on alternative social apps may unfold gradually. This pattern highlights the importance of leveraging variation in collective time use sustained over longer durations to accurately measure substitution dynamics.
+
+
+
+\subsubsection{Benchmarking Substitution Patterns} \label{lit-bench}
+
+Our main result from the collective time-limit challenge is that \TrtFDSubPercentSocial\space of the decrease in time spent on TikTok and Instagram is substituted towards other social  apps. To our knowledge, this is the first estimate of substitution patterns from a collective intervention that took place over a sustained period of time.\footnote{\cite{rehse2025competition} find a 18.4\% increase in non-Meta social usage after a six-hour Meta outage. This magnitude is similar to the  18.5\% increase in the time spent on non-Instagram social applications following the Instagram restriction in \cite{aridor2022drivers}. Consistent with our findings on the dynamics of diversion, this similarity could be explained by the fact that coordination takes time to materialize.} We benchmark our results against the literature on individual deactivation challenges. Two studies provide comparable estimates from individual-level interventions that hold network effects fixed. 
+
+\cite{aridormeasuring2025}, the most closely related paper, finds an 18.5\% (approximately 4 minutes) and a 9\% (approximately 4 minutes) time substitution toward other social apps following an individual Instagram and YouTube deactivation, respectively. \cite{allcott2025effect} find that deactivating Instagram results in a 39\% increase (approximately 8 minutes) in time spent on other social media apps, while deactivating Facebook leads to a 41\% increase (approximately 15 minutes).\footnote{Notably, \cite{allcott2025effect} involved young to middle-aged adults, whereas our evidence from the collective challenge comes from U.S. undergraduate college students. 
+Further, the respondents exhibited significantly lower average baseline usage of Instagram compared to our sample.}  In summary, the estimates from both studies are substantially lower than those observed in our collective intervention.
+
+\subsubsection{Limitations}
+
+\paragraph{Robustness checks} In Appendix \ref{nomo_robustness}, we demonstrate that our estimates are robust across various sample inclusion criteria, different levels of winsorization, and focusing on users with perfect challenge compliance.
+
+
+\paragraph{Limitations}
+
+Our results are subject to several limitations. First, the evidence is descriptive in nature given the lack of a randomized control group that undergoes an individual-level deactivation. We also cannot rule out the possibility of underlying time trends during our study period.\footnote{\cite{aridor2025election} provides evidence that election content consumption on smartphones was limited and stable during the 2024 U.S. Presidential election, suggesting that election-related events are unlikely to contribute to an underlying time trend for our results.} Future work should analyze the effects of randomly assigned collective versus individual interventions. Second, our analysis focuses on substitution patterns arising from a joint reduction in TikTok and Instagram usage; thus, we cannot separately identify how substitution might differ if the intervention targeted only one platform or involved complete deactivation. While our findings reflect substitution patterns influenced by network effects—given that recruitment heavily relied on peer networks, the short duration (two weeks) and limited penetration of the network (approximately 11\% of the undergraduate population) imply that these estimates likely represent a lower bound on substitution responses driven by network dynamics. Finally, our sample comprises self-selected University of Chicago undergraduates who chose to join the challenge and provide screenshot data. Future research should gauge how generalizable these findings are to broader populations.
+
+
+
+
+\section{Conclusion}\label{sec:conclusion}
+
+In this paper, we document a gap between substitution patterns that account for network effects and those that do not. Our framework and estimates highlight that individual and collective treatments can lead to qualitatively different conclusions about which alternative goods are substitutes or complements. Our incentivized experiment with young Americans reveals that valuations for other social apps increase more sharply in response to a collective TikTok ban compared to an individual TikTok deactivation. Conversely, intended substitution patterns toward non-social goods are stronger in the case of an individual TikTok deactivation. We additionally analyze actual time use data from a collective social media time limit challenge, where we find larger substitution to other social apps compared to prior individual deactivation estimates in the literature. 
+%Consistent with substantial coordination frictions, our estimated substitution towards alternative social apps is higher in week two of the collective time limit challenge. 
+
+
+Our results suggest that the failure to account for network effects could result in mismeasuring a product's relevant market. For TikTok, accounting for network effects reveals that other social apps are closer substitutes than suggested by fixed-network estimates, making it more likely that they are part of the relevant market. At the same time, our estimates suggest that non-social activities---such as video gaming and meditation---are weaker substitutes for social media, making it less likely that they are part of the relevant market. Thus, network effects may make the market narrower---vis à vis non-social activities---yet broader within the set of social media apps. Beyond social media, our findings carry important implications for antitrust policy regarding network goods.
+
+ 
+
+\end{spacing}
+
+
+\begin{spacing}{1}
+\bibliographystyle{aer}
+\normalsize \bibliography{bibfile.bib}
+\end{spacing}
+%\end{spacing}
+
+
+
+\clearpage
+
+\appendix
+
+% Reset counters
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+% Change numbering format
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+
+\begin{center}
+\Huge \textbf{Online Appendix:\\Not for publication}
+\end{center}
+Our supplementary material is structured as follows. Appendix~\ref{appsec:deactivation} includes additional tables and figures about the TikTok collective versus individual experiment. Appendix~\ref{appsec:nomo} includes additional tables and figures about the collective time limit challenge. %Appendix~\ref{appsec:instructions} presents the instructions for all experiments described in the paper.
+
+
+
+\clearpage
+
+%\input{appendices/appnew_theory}
+
+%\clearpage
+
+\input{appendices/appnew_datacollection}
+
+\clearpage
+
+\input{appendices/appnew_deactivation}
+
+%\clearpage
+
+\input{appendices/appnew_nomo}
+
+%\input{appendices/appnew_datamanipulation}
+%\clearpage
+%\input{appendices/appnew_instructions}
+
+%%%% Appendix
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\tablename}{Appendix Table} 
+\renewcommand{\figurename}{Appendix Figure}
+
+\setcounter{table}{0} 
+\setcounter{figure}{0}
+
+\end{document}
+
